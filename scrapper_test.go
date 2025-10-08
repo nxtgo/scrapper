@@ -10,7 +10,7 @@ import (
 var data []byte
 
 func init() {
-	ldata, err := os.ReadFile("example_webpage.html")
+	ldata, err := os.ReadFile("./example/example_webpage.html")
 	if err != nil {
 		panic("failed to read file")
 	}
