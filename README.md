@@ -3,7 +3,7 @@ A simple and minimalist web-scrapping tool
 
 Make requests and extract their values in a struct
 
-**Example**
+**Usage**
 ```go
 import "github.com/nxtgo/scrapper"
 
@@ -17,12 +17,14 @@ import "github.com/nxtgo/scrapper"
 //     h1.bg-green
 //     input[aria-label="Email"]
 elements, err := scrapper.ScrapByURL(url string, selector string)
-// ^^ element
+// ^^ each element
 type ScrapElement struct {
 	Value string // The html inner content
 	Raw   string // The raw html element
 }
 ```
+
+[example](./example/main.go)
 
 ### license
 CC0 1.0
