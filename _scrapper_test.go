@@ -17,9 +17,9 @@ func init() {
 
 func BenchmarkMatchContentClass(b *testing.B) {
 	for i := 0; i < b.N; i++ {
-		scrapElements, sErr := scrapper.MatchElements(data, "li.nav-item")
-		if sErr != nil {
-			b.Fatal("Matching failed:", sErr)
+		scrapElements, err := scrapper.MatchElements(data, "li.nav-item")
+		if err != nil {
+			b.Fatal("Matching failed:", err)
 		}
 		if len(scrapElements) <= 0 {
 			b.Fatal("Matching failed: Empty Elements")
@@ -29,9 +29,9 @@ func BenchmarkMatchContentClass(b *testing.B) {
 
 func BenchmarkMatchContentId(b *testing.B) {
 	for i := 0; i < b.N; i++ {
-		scrapElements, sErr := scrapper.MatchElements(data, "section#home")
-		if sErr != nil {
-			b.Fatal("Matching failed:", sErr)
+		scrapElements, err := scrapper.MatchElements(data, "section#home")
+		if err != nil {
+			b.Fatal("Matching failed:", err)
 		}
 		if len(scrapElements) <= 0 {
 			b.Fatal("Matching failed: Empty Elements")
@@ -41,9 +41,9 @@ func BenchmarkMatchContentId(b *testing.B) {
 
 func BenchmarkMatchContentComodin(b *testing.B) {
 	for i := 0; i < b.N; i++ {
-		scrapElements, sErr := scrapper.MatchElements(data, `li[aria-label="desc"]`)
-		if sErr != nil {
-			b.Fatal("Matching failed:", sErr)
+		scrapElements, err := scrapper.MatchElements(data, `li[aria-label="desc"]`)
+		if err != nil {
+			b.Fatal("Matching failed:", err)
 		}
 		if len(scrapElements) <= 0 {
 			b.Fatal("Matching failed: Empty Elements")
