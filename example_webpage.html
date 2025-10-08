@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>test_page — Digital Innovation Studio</title>
+  <meta name="description" content="Official example website for test_page, a digital innovation and software development agency.">
+  <link rel="icon" href="/favicon.ico">
+</head>
+<body class="page-root">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="brand">test_page</a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="#services">Services</a></li>
+          <li class="nav-item"><a href="#portfolio">Portfolio</a></li>
+          <li class="nav-item"><a href="#team">Team</a></li>
+          <li class="nav-item"><a href="#blog">Blog</a></li>
+          <li class="nav-item"><a href="#careers">Careers</a></li>
+          <li class="nav-item"><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="site-main container">
+    <section class="hero" id="home">
+      <h1 class="hero-title">Building the Future of Digital Innovation</h1>
+      <p class="hero-sub">At test_page, we craft digital products that empower organizations and inspire people around the world.</p>
+      <a href="#services" class="btn btn-primary">Explore Our Work</a>
+    </section>
+
+    <section class="about" id="about">
+      <h2>About test_page</h2>
+      <p>test_page is a technology studio founded in 2015 with headquarters in Bogotá and remote teams across Latin America and Europe. We specialize in web development, UX/UI design, and AI-based solutions. Our goal is to make technology accessible, efficient, and human-centered.</p>
+      <p>We’ve collaborated with startups, NGOs, and Fortune 500 companies, delivering products that serve millions of users globally. We believe that innovation happens when strategy, creativity, and engineering align.</p>
+    </section>
+
+    <section class="values" id="values">
+      <h2>Our Core Values</h2>
+      <ul class="values-list">
+        <li aria-label="desc"><strong>Transparency:</strong> We communicate openly and clearly.</li>
+        <li aria-label="desc"><strong>Innovation:</strong> We push boundaries to find smarter solutions.</li>
+        <li aria-label="desc"><strong>Empathy:</strong> We build technology that respects and empowers users.</li>
+        <li aria-label="desc"><strong>Quality:</strong> Every detail matters in our delivery.</li>
+      </ul>
+    </section>
+
+    <section class="services" id="services">
+      <h2>What We Do</h2>
+      <div class="service-grid">
+        <article class="service-card">
+          <h3>UX/UI Design</h3>
+          <p>Crafting delightful and accessible interfaces through deep user research and design systems.</p>
+        </article>
+        <article class="service-card">
+          <h3>Full-Stack Development</h3>
+          <p>Building high-performance apps using Go, TypeScript, and modern cloud infrastructures.</p>
+        </article>
+        <article class="service-card">
+          <h3>AI & Data Engineering</h3>
+          <p>We design machine learning models and data pipelines that unlock insights and automation.</p>
+        </article>
+        <article class="service-card">
+          <h3>Consulting & Strategy</h3>
+          <p>Helping companies scale their digital transformation through expert consulting and agile practices.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="portfolio" id="portfolio">
+      <h2>Selected Projects</h2>
+      <ul class="project-list">
+        <li>
+          <h3>HealthLink Platform</h3>
+          <p>A secure telemedicine system with real-time video, AI triage, and patient history management.</p>
+        </li>
+        <li>
+          <h3>EcoFleet Analytics</h3>
+          <p>Data dashboard for optimizing electric vehicle fleets using predictive analytics.</p>
+        </li>
+        <li>
+          <h3>Streamify Studio</h3>
+          <p>Interactive streaming tool for content creators with monetization and collaboration features.</p>
+        </li>
+      </ul>
+    </section>
+
+    <section class="careers" id="careers">
+      <h2>Join Our Team</h2>
+      <p>We’re looking for curious minds and problem solvers who love working with cutting-edge technologies. At test_page, you’ll have the freedom to create, the support to grow, and the tools to make an impact.</p>
+      <ul class="open-positions">
+        <li><strong>Frontend Developer</strong> — Remote (LATAM)</li>
+        <li><strong>Backend Engineer (Go)</strong> — Remote</li>
+        <li><strong>Product Designer</strong> — Bogotá, Hybrid</li>
+      </ul>
+      <a href="/careers" class="btn btn-secondary">View All Openings</a>
+    </section>
+
+    <section class="blog" id="blog">
+      <h2>From Our Blog</h2>
+      <article class="post">
+        <h3><a href="/blog/future-of-ai">The Future of AI in Everyday Life</a></h3>
+        <p>Explore how artificial intelligence is transforming industries from healthcare to education.</p>
+      </article>
+      <article class="post">
+        <h3><a href="/blog/design-systems">Why Design Systems Matter</a></h3>
+        <p>Learn how cohesive design systems improve scalability and brand consistency.</p>
+      </article>
+      <article class="post">
+        <h3><a href="/blog/go-performance">Optimizing Go Services for High Performance</a></h3>
+        <p>A deep dive into concurrency, profiling, and tuning Go backends for low latency.</p>
+      </article>
+    </section>
+
+    <section class="contact" id="contact">
+      <h2>Get in Touch</h2>
+      <p>Have a project in mind or want to collaborate with us? Fill out the form below and our team will reach out shortly.</p>
+      <form class="contact-form" action="/send" method="post" novalidate>
+        <label class="form-row">
+          <span>Name</span>
+          <input type="text" name="name" required class="input-text">
+        </label>
+        <label class="form-row">
+          <span>Email</span>
+          <input type="email" name="email" required class="input-email">
+        </label>
+        <label class="form-row">
+          <span>Message</span>
+          <textarea name="message" rows="6" class="input-textarea"></textarea>
+        </label>
+        <div class="form-actions">
+          <button type="submit" class="btn btn-primary">Send Message</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2025 test_page. All rights reserved.</p>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="/terms">Terms</a> · <a href="/privacy">Privacy</a> · <a href="#home">Back to Top</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>
