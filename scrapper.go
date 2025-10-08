@@ -23,14 +23,15 @@ func call(url string, expr string) ([]ScrapElement, error) {
 		return []ScrapElement{}, err
 	}
 
-	bytes, io_err := io.ReadAll(r.Body)
-	if io_err != nil {
-		return []ScrapElement{}, io_err
+	bytes, err := io.ReadAll(r.Body)
+	if err != nil {
+		return []ScrapElement{}, err 
 	}
+	defer r.Body.Close()
 
-	scraps, scrap_err := MatchElements(bytes, expr)
-	if scrap_err != nil {
-		return []ScrapElement{}, io_err
+	scraps, err := MatchElements(bytes, expr)
+	if err != nil {
+		return []ScrapElement{}, err
 	}
 
 	return scraps, nil
