@@ -12,10 +12,12 @@ import "github.com/nxtgo/scrapper"
 //     # id
 //     . class
 //     [] comodin
+//     > child of
 // examples:
 //     h1#main_title
 //     h1.bg-green
 //     input[aria-label="Email"]
+//     ul.nav-list > li.nav-item
 elements, err := scrapper.ScrapByURL(url string, selector string)
 // ^^ each element
 type ScrapElement struct {

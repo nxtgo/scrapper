@@ -52,3 +52,16 @@ func TestMatchContentComodin(t *testing.T) {
 		t.Error("Matching failed: Empty Elements")
 	}
 }
+
+
+func TestMatchContentChild(t *testing.T) {
+
+	scrapElements,err := scrapper.MatchElements(data, `ul.nav-list > li.nav-item`)
+
+	if err != nil {
+		t.Error("Matching failed: ", err)
+	}
+	if len(scrapElements) <= 0 {
+		t.Error("Matching failed: Empty Elements")
+	}
+}

@@ -50,7 +50,11 @@ func matchContent(content []byte, expr string) [][]byte {
 	selector := []string{expr}
 	var has string
 
-	if strings.Contains(expr, "#") {
+	if strings.Contains(expr, " > ") {
+		selector = strings.Split(expr, " > ")
+		newContent := matchContent(content, selector[0])
+		return matchContent(newContent[0], selector[1])
+	} else if strings.Contains(expr, "#") {
 		selector = strings.Split(expr, "#")
 		has = "id"
 	} else if strings.Contains(expr, ".") {
